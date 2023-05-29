@@ -64,16 +64,17 @@ submitBtn.addEventListener('click', () => {
     };
     if (path === 'update-post') {
       updateElementFirebase('posts', sessionStorage.getItem('last_updated_card'), card);
-      showAlert('Congratz', 'Card updated', 'success');
+      alert('Congratz', 'Card updated', 'success');
     } else {
       addElementInFirebase('posts', card);
-      showAlert('Congratz', 'Card uploaded', 'success');
+      alert('Congratz', 'Card uploaded', 'success');
     }
     setTimeout(() => {
       location.href = "index.html";
     }, 2000);
   } else {
-    showAlert('Fill data', 'fill title and description', 'error');
+    alert('Fill data', 'fill title and description', 'error');
+    document.body.removeChild(loader);
   }
 });
 
