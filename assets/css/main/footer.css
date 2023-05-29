@@ -12,6 +12,18 @@ a:active {
     outline: none;
 }
 
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.links{
+    display: none;
+}
+
 a,
 a:active,
 a:focus {
@@ -40,8 +52,8 @@ a:focus {
     padding-top: 80px;
     padding-bottom: 40px;
 }
-/*END FOOTER SOCIAL DESIGN*/
-/* .single_footer{} */
+
+
 @media only screen and (max-width:768px) { 
 .single_footer{margin-bottom:30px;}
 }
@@ -185,21 +197,23 @@ footer button {
 }
 
 @media only screen and (max-width:768px) { 
-.social_profile ul li a{
-    margin-right:10px;
-    margin-bottom:10px;
-}
+    .social_profile{
+        align-items: center;
+    }
+    .social_profile ul li a{
+        margin-right:10px;
+        margin-bottom:10px;
+    }
+    .row{
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width:480px) { 
     .social_profile ul li a{
-    width:40px;
-    height:40px;
-    line-height:40px;
-    }
-
-    .row{
-        flex-direction: column;
+        width:40px;
+        height:40px;
+        line-height:40px;
     }
     
     .col-lg-4,
@@ -215,11 +229,29 @@ footer button {
     }
 }
 
-.social_profile ul li a:hover{
-    background:#ff3666;
-    border: 1px solid #ff3666;
-    color:#fff;
-    border:0px;
+@media screen and (max-width: 400px) {
+    .social_profile .social-icons {
+        display: none;
+    }
+
+    .social_profile ul{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social_profile ul li{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .social_profile ul li a{
+        width: 100%;
+        margin: 0;
+        display: block;
+        color: #333;
+    }
 }
 
 /*END SOCIAL PROFILE CSS*/
