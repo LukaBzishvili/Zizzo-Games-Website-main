@@ -1,0 +1,122 @@
+.job-cards {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5%;
+  text-align: center;
+  color: black;
+}
+
+#post-image{
+  border-radius: 10px;
+}
+
+.card-condition{
+  background-color: green;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.card-condition-red{
+  background-color: red;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 20px;
+  min-height: 40%;
+  border: 6px solid black;
+  border-radius: 20px;
+  align-self: stretch;
+}
+
+.card-text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.button-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.btn {
+  width: 35%;
+}
+
+.btn-danger {
+  background-color: red;
+}
+
+.btn-primary {
+  background-color: rgba(21, 94, 158, 0.735);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .job-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .job-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Loading Animation */
+
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f6;
+  border-radius: 50%;
+  animation: loading 3.75s;
+}
+
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(3turn);
+  }
+}
