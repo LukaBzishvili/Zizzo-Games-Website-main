@@ -15,7 +15,7 @@
 }
 
 .four {
-  background-image: url(/assets/images/general/sparklez.jpg);
+  background-image: url(assets/images/general/sparklez.jpg);
   background-color: #4740a88b;
   background-blend-mode: lighten;
 }
